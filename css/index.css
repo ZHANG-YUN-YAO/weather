@@ -1,0 +1,267 @@
+body{
+	width: 7.5rem;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+.back{
+	width: 7.5rem;
+	height:9.44rem;
+	background: linear-gradient(rgb(60,190,255),rgb(70,226,255));
+	position: relative;
+	color: white;
+}
+.back img{
+	width: 100%;
+	height:2.28rem;
+	position: absolute;
+	bottom: 0;
+	
+}
+.back-1{
+	
+	font-weight: bold;
+	font-size: 0.8rem;
+	position: absolute;
+	left: 2.6rem;
+	top: 1.44rem;
+	
+}
+.back-2{
+	
+	font-weight: bold;
+	font-size: 0.4rem;
+	position: absolute;
+	left: 2.76rem;
+	top: 2.68rem;
+}
+.green{
+	width: 0.8rem;
+	height: 1rem;
+	background: rgb(163,215,101);
+	color: white;
+	font-size: 0.18rem;
+	border-radius:16% ;
+	text-align: center;
+	line-height: 1rem;
+	position: absolute;
+	left: 0.24rem;
+	top: 1.4rem;
+}
+.wind p{
+	width: 0,72rem;
+	height: 0.24rem;
+	font-size: 0.4rem;
+	position: absolute;
+	left: 2.26rem;
+	top: 3.6rem;
+}
+.wd2{
+	opacity: 0;
+}
+.back span{
+	font-size: 0.4rem;
+	position: absolute;
+	left: 1.3rem;
+	top: 5.6rem;
+}
+.position{
+	width: 2.2rem;
+	height: 0.44rem;
+	position: absolute;
+	top: 0.4rem;
+	left: 2.6rem;
+	text-align: center;
+	line-height: 0.4rem;
+	font-size: 0.34rem;
+}
+.position1{
+	width: 0.24rem;
+	height: 0.24rem;
+	position: absolute;
+	top: 0.1rem;
+	left: 2.5rem;
+}
+.today{
+	width: 7.5rem;
+	height: 2.04rem;
+	border-bottom: 0.2rem solid gainsboro;
+	
+	position: relative;
+}
+.toL{
+	display: inline-block;
+	width: 3.74rem;
+	height: 1.22rem;
+	position: absolute;
+	top: 0.4rem;
+	border-right: 0.01rem solid rgba(0,0,0,0.2);
+}
+.toR{
+	display: inline-block;
+	width: 3.74rem;
+	height: 1.22rem;
+	position: absolute;
+	top: 0.4rem;
+	right: 0;
+	border: 0;
+}
+.toL img,.toR img{
+	margin-left: 2.24rem;
+	margin-top: 0.4rem;
+}
+.toL>p,.toR>p{	
+	font-size: 0.16rem;
+}
+.toL1,.toL2,.toL3{	
+	position: absolute;
+	top: -0.1rem;
+	left: 0.54rem;
+}
+
+.toL2{
+	top: 0.54rem;	
+}
+.toL3{
+	left: 2.3rem;
+}
+.toR1,.toR2,.toR3{	
+	position: absolute;
+	top: -0.1rem;
+	left: 0.52rem;
+}
+
+.toR2{
+	top: 0.52rem;	
+}
+.toR3{
+	left: 2.24rem;
+}
+.section{
+	width: 7.5rem;
+	height: 2.4rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	border-bottom: 0.2rem solid gainsboro;
+	
+}
+.tomorrow{
+	width: 25rem;
+	height: 2.64rem;
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-top: 0.16rem;	
+	
+}
+.tomorrow ul{
+	display: inline-block;
+	list-style: none;
+	font-size: 0.2rem;
+	margin-left: -0.6rem;
+}
+.tomorrow ul li{
+	text-align: center;
+}
+.more {
+	width: 7.5rem;
+	height: 7.2rem;
+	padding-top: 0.16rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	border-bottom: 0.2rem solid gainsboro;
+}
+.more1 {
+	width: 22rem;
+	height: 6.64rem;
+	}
+.more1 .top ul{
+	display: inline-block;
+	list-style: none;
+	font-size: 0.2rem;
+	margin-left: -0.12rem;
+}
+.more1 ul li{
+	text-align: center;
+}
+.middle{
+	width: 1800px;
+	height: 2.24rem;
+	/* background: rgba(0,0,0,0.05); */
+	
+	
+}
+.middle>div{
+		width: 100% !important;
+		height: 150px !important;
+	}
+	.middle>div canvas{
+		width: 100% !important;
+		height: 150px !important;
+	}
+.middle2{
+	width: 22rem;
+}
+.more1 .middle2 ul{
+	display: inline-block;
+	list-style: none;
+	font-size: 0.2rem;
+	/* margin-right: 0rem; */
+}
+.bottom{
+	width: 100%;
+	height: 3.32rem;
+	overflow-x: auto;
+	
+}
+section{
+	width: 14.88rem;
+	height: 3.32rem;
+	overflow-x: auto;
+	
+}
+.bottom section ul{
+	width: 1.84rem;
+	height: 1.52rem;
+	float:left;
+	list-style: none;
+	font-size: 0.2rem;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	overflow-y: hidden;
+	overflow-x: auto;
+	padding-top: 0.1rem;
+	border: 0.01rem solid gainsboro;	
+
+	
+}
+
+.bottom section ul img{
+	width: 0.48rem;
+	height: 0.48rem;
+	display: inline-block;
+}
+.bottom section ul li{
+	margin: 0;
+	
+}
+.foot{
+	width: 7.5rem;
+	height: 0.4rem;
+	display: flex;
+	justify-content: center;
+
+}
+.foot div{
+	width: 0.14rem;
+	height: 0.05rem;
+	border-radius: 16%;
+	background: cadetblue;
+	margin-top: 0.14rem;
+	margin-right: 0.06rem;
+	
+}

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+
+	
+</style>
+<head>
+	<!--流程：
+	1.获取默认城市天气信息
+	2.获取所有城市信息
+	3.点击每个城市可以获取当前城市的天气信息
+	4.在搜索框内输入要搜索的城市,点击搜索按钮可以进行搜索-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/citys.css"/>
+	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+   
+</head>
+<body>
+	<div class="back">
+		<!--<img class="position1" src="img/定位.png"/>-->
+		<div class="position">			
+			北京市 海淀区
+		</div>
+		<p class="back-1">24°</p>
+		<p class="back-2">多云</p>
+		<div class="wind">
+			<p class="wd1">东南风 2级</p>
+			<p class="wd2">湿度 42%</p>
+		</div>
+		<span>光芒透过云峰，洒向大地~</span>
+		<div class="green">
+			优
+		</div>
+		<img src="img/screen.png" alt="" />
+	</div>
+	<div class="today">
+		<div class="toL">
+			<p class="toL1">今天</p>
+			<p class="toL2">多云</p>
+			<p class="toL3">24/13°</p>
+			<img src="img/1.png" alt="" />
+		</div>
+		<div class="toR">
+			<p class="toR1">明天</p>
+			<p class="toR2">小雨</p>
+			<p class="toR3">23/11°</p>
+			<img src="img/7.png" alt="" />
+		</div>		
+	</div>
+<div class="section">
+	<div class="tomorrow"></div>
+</div>
+<div class="more">
+	<div class="more1">
+		
+		<div class="top">
+			<!-- <ul>
+				<li>昨天</li>
+				<li>09/25</li>
+				<li>晴</li>
+				<li><img src="img/0.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>今天</li>
+				<li>09/26</li>
+				<li>多云</li>
+				<li><img src="img/1.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>明天</li>
+				<li>09/27</li>
+				<li>小雨</li>
+				<li><img src="img/7.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>后天</li>
+				<li>09/28</li>
+				<li>多云</li>
+				<li><img src="img/1.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>周六</li>
+				<li>09/29</li>
+				<li>晴</li>
+				<li><img src="img/0.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>周日</li>
+				<li>09/30</li>
+				<li>晴</li>
+				<li><img src="img/0.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>周一</li>
+				<li>10/01</li>
+				<li>晴</li>
+				<li><img src="img/0.png" alt="" /></li>
+			</ul>
+			<ul>
+				<li>周二</li>
+				<li>10/02</li>
+				<li>多云</li>
+				<li><img src="img/1.png" alt="" /></li>
+			</ul> -->
+		</div>
+		
+		<div class="middle" id="middle" >
+	
+		</div>
+		<div class="middle2">
+				<!-- <ul>
+					<li><img src="img/31.png" alt="" /></li>
+					<li>多云</li>
+					<li>南风</li>
+					<li>3级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/31.png" alt="" /></li>
+					<li>多云</li>
+					<li>南风</li>
+					<li>3级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/7.png" alt="" /></li>
+					<li>小雨</li>
+					<li>南风</li>
+					<li>3级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/31.png" alt="" /></li>
+					<li>多云</li>
+					<li>北风</li>
+					<li>3级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/30.png" alt="" /></li>
+					<li>晴</li>
+					<li>北风</li>
+					<li>4级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/30.png" alt="" /></li>
+					<li>晴</li>
+					<li>西北风</li>
+					<li>3级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/30.png" alt="" /></li>
+					<li>晴</li>
+					<li>北风</li>
+					<li>3级</li>				
+				</ul>
+				<ul>
+					<li><img src="img/31.png" alt="" /></li>
+					<li>多云</li>
+					<li>西北风</li>
+					<li>3级</li>				
+				</ul> -->
+		</div>
+		
+	</div>
+	
+</div>
+<div class="bottom">
+	<section>
+	<ul>
+		<li><img src="img/小汽车.png"/></li>
+		<li>5和0</li>
+		<li>尾号限行</li>
+	</ul>
+	<ul>
+		<li><img src="img/衣服.png"/></li>
+		<li>较舒适</li>
+		<li>穿衣</li>
+	</ul>
+	<ul>
+		<li><img src="img/雨伞.png"/></li>
+		<li>带伞</li>
+		<li>雨伞</li>
+	</ul>
+	<ul>
+		<li><img src="img/药丸.png"/></li>
+		<li>少发</li>
+		<li>感冒</li>
+	</ul>
+	<ul>
+		<li><img src="img/洗车.png"/></li>
+		<li>不宜</li>
+		<li>洗车</li>
+	</ul>
+	<ul>
+		<li><img src="img/篮球.png"/></li>
+		<li>较不宜</li>
+		<li>运动</li>
+	</ul>
+	<ul>
+		<li><img src="img/太阳.png"/></li>
+		<li>弱</li>
+		<li>防晒</li>
+	</ul>
+	<ul>
+		<li><img src="img/鱼.png"/></li>
+		<li>不宜</li>
+		<li>钓鱼</li>
+	</ul>
+	
+	<ul>
+		<li><img src="img/洗车.png"/></li>
+		<li>不宜</li>
+		<li>洗车</li>
+	</ul>
+	<ul>
+		<li><img src="img/篮球.png"/></li>
+		<li>较不宜</li>
+		<li>运动</li>
+	</ul>
+	<ul>
+		<li><img src="img/太阳.png"/></li>
+		<li>弱</li>
+		<li>防晒</li>
+	</ul>
+	<ul>
+		<li><img src="img/鱼.png"/></li>
+		<li>不宜</li>
+		<li>钓鱼</li>
+	</ul>
+	<ul>
+		<li><img src="img/小汽车.png"/></li>
+		<li>5和0</li>
+		<li>尾号限行</li>
+	</ul>
+	<ul>
+		<li><img src="img/衣服.png"/></li>
+		<li>较舒适</li>
+		<li>穿衣</li>
+	</ul>
+	<ul>
+		<li><img src="img/雨伞.png"/></li>
+		<li>带伞</li>
+		<li>雨伞</li>
+	</ul>
+	<ul>
+		<li><img src="img/药丸.png"/></li>
+		<li>少发</li>
+		<li>感冒</li>
+	</ul>
+	
+	</section>
+
+</div>
+<div class="foot">
+	<div></div>
+	<div></div>
+</div>
+<div class="body2">	
+		<div class="top">
+			<input type="text"  placeholder="搜索市，区，县等"/><span class="p1">取消</span>
+		</div><hr />
+		<p>当前定位</p>
+		<div class="first">			
+			小店区
+		</div>
+		<p>历史记录</p>
+		<div class="second">			
+			<div>拉萨</div>
+			<div>上海</div>
+		</div>
+		<div class="yy">
+			<p class="hot">热门城市</p>
+			<div class="third">			
+			<!--<div>北京</div>
+			<div>上海</div>
+			<div>广州</div>
+			<div>深圳</div>
+			<div>郑州</div>
+			<div>西安</div>
+			<div>南京</div>
+			<div>杭州</div>
+			<div>武汉</div>
+			<div>成都</div>
+			<div>武汉</div>
+			<div>成都</div>
+			<div>武汉</div>
+			<div>成都</div>-->
+			
+		</div>
+	</div>
+		<p>热门景区</p>
+		<div class="forth">
+			
+			<div>故宫</div>
+			<div>颐和园</div>
+			<div>九寨沟</div>
+			<div>凤凰古城</div>
+			<div>秦始皇陵</div>
+			<div>龙门石窟</div>
+			<div>武陵源</div>
+			<div>华山</div>
+			<div>黄山</div>
+		</div>
+		
+		
+	</div>	
+	
+</body>
+</html>
+<script type="text/javascript">
+	//页面加载完成时
+	$(function(){
+		//1.获取当前城市的天气信息
+		let tianqi;
+		$.ajax({
+			type:"get",
+			url:"https://www.toutiao.com/stream/widget/local_weather/data/?city=太原",
+			dataType:"jsonp",
+			success:function(obj){
+				tianqi=obj.data;
+//				console.log(obj);
+				update(tianqi);
+//				console.log(tianqi);			
+				
+			}
+		})
+	})
+			
+
+		function update(tianqi) {
+			let higtweather=[];
+			let lowweather=[];
+			//获取当前城市
+				$(".position").html(tianqi.city);
+//				console.log(position)
+//				获取当前城市的天气情况
+				$(".back-2").html(tianqi.weather.current_condition);
+				
+				//获取当前温度
+				$(".back-1").html(tianqi.weather.current_temperature);
+				//获取当前天气状况
+				$(".green").html(tianqi.weather.quality_level);
+				//获取当前风向
+				$(".wd1").html(tianqi.weather.wind_direction+tianqi.weather.wind_level+'级')
+				//获取当前风力
+//				$(".wd1").html(tianqi.weather.wind_level+'级');
+				//今天的天气
+				$(".toL3").html(tianqi.weather.dat_high_temperature+"/"+tianqi.weather.dat_low_temperature+"°")
+//				console.log(toL3)
+//				$("").html(tianqi.weather.dat_low_temperature+"°")
+				$(".toL2").html(tianqi.weather.dat_condition)
+				$(".toL img").attr({"src":"img/"+tianqi.weather.dat_weather_icon_id+".png"})
+				
+				
+				
+				//明天的天气
+				$(".toR3").html(tianqi.weather.dat_high_temperature+"/"+tianqi.weather.dat_low_temperature+"°")
+//				console.log(toR3)
+//				$("").html(tianqi.weather.dat_low_temperature+"°")
+				$(".toR2").html(tianqi.weather.dat_condition)
+				$(".toR img").attr({"src":"img/"+tianqi.weather.dat_weather_icon_id+".png"})
+//				
+//				
+//				//未来24小时的天气
+				let hweather=tianqi.weather.hourly_forecast;
+				let forecast_list=tianqi.weather.forecast_list;
+				console.log(forecast_list);
+				forecast_list.forEach(function(v){
+					higtweather.push(v.high_temperature);
+					lowweather.push(v.low_temperature);
+					let str=`
+				<ul>
+					
+					<li><span>${v.date.split('-')[1]}</span>
+						<span>/</span>
+				 			<span>${v.date.split('-')[2]}</span></li>
+					<li>${v.condition.split('转')[0]}</li>
+					<li><img src="img/${v.weather_icon_id
+}.png" alt="" /></li>
+					<li>${v.high_temperature}°</li>
+				</ul>
+				
+			`;
+			let str2=`
+
+					<ul>
+						<li>${v.low_temperature}°</li>
+						<li>${v.condition.includes("转")?v.condition.split('转')[1]:v.condition}</li>
+						<li>${v.wind_direction}</li>
+						<li>${v.wind_level}级</li>				
+					</ul>
+			`;
+			$(".more1 .top").append(str);
+			$(".middle2").append(str2);
+			// <div class="week">
+			// 		<div class="week_date">
+			// 			<span>${v.date.split('-')[1]}</span>
+			// 			<span>/</span>
+			// 			<span>${v.date.split('-')[2]}</span>
+			// 		</div>
+			// 		<div class="week_weaH">${v.condition.split('转')[0]}</div>
+			// 		<div class="week_imgH"></div>
+					
+			// 		<div class="week_weaL">${v.condition.includes("转")?v.condition.split('转')[1]:v.condition}</div>
+			// 		<div class="week_imgL"></div>
+			// 		<div class="win">${v.wind_direction}</div>
+			// 		<div class="level">${v.wind_level}级</div>
+			// 	</div>
+			// <div class="high">${v.high_temperature}°</div>
+			// 		<div class="low">${v.low_temperature}°</div>
+			// $(".recent .scroll1").append(str);
+				});
+				console.log(higtweather);
+
+				// console.log(forecast_list);
+//				console.log(hweather)
+				hweather.forEach(function(v){
+					// console.log(v)
+					let str=`
+					<ul>
+						<li>${v.hour+":00"}</li>
+						<li><img src="img/${v.weather_icon_id}.png"/></li>
+						<li>${v.temperature+"°"}</li>
+					</ul>`
+					$(".tomorrow").append(str)
+		
+				})
+				// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('middle'));
+
+        // 指定图表的配置项和数据
+        var option = {
+             title: {
+//      text: '未来一周气温变化',
+        subtext: ''
+    },
+    // tooltip: {
+    //     trigger: 'axis'
+    // },
+    
+     grid: {
+		        left:'1%',   
+		        top: '20%',
+		        bottom: '-10%',
+		        containLabel: true
+		    },
+    xAxis:  {
+        // type: 'category',
+        boundaryGap: false,
+        data : ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],
+        //可以不显示
+     show:false
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value} °C'
+        },
+        show:false
+    },
+    series: [
+        {
+            name:'最高气温',
+            type:'line',
+            data:higtweather
+           
+        },
+        {
+            name: '最低气温',
+            type: 'line',
+            smooth: 0.5,
+				itemStyle:{normal:{label:{show:true,position:"bottom"},lineStyle:{color:"#4ec3e7"}}},
+            data: lowweather
+    	}
+    ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+				
+		}
+	
+	
+	//获取15天气数据的函数
+//	function update(){
+	
+//}
+//	//点击出现   消失
+	$(".position").click(function(){
+		$(".body2").css({"display":"block"})
+		$(".section").css({"display":"none"})
+		$(".more").css({"display":"none"})
+		$(".bottom").css({"display":"none"})
+		$(".foot").css({"display":"none"})
+		$(".back").css({"display":"none"})
+		$(".today").css({"display":"none"})
+	})
+	$(".p1").click(function(){		
+		$(".body2").css({"display":"none"})
+		$(".section").css({"display":"block"})
+		$(".more").css({"display":"block"})
+		$(".bottom").css({"display":"block"})
+		$(".foot").css({"display":"block"})
+		$(".back").css({"display":"block"})
+		$(".today").css({"display":"block"})
+	})
+//	
+	//获取每个城市信息
+	let city;
+	$.ajax({
+		type:"get",
+		url:"https://www.toutiao.com/stream/widget/local_weather/city/",
+		dataType:"jsonp",
+		success:function(obj){
+			city=obj.data;
+			updataCity(city);
+		}
+			
+	})
+	function updataCity(city){
+		let k=0;
+		for(let i in city){
+//			console.log(i)
+			let str=`<div >	${i}</div>`;
+			$(".third").append(str);			
+
+			for(let j in city[i]){
+//				console.log(j)
+				let str1=`<div>${j}</div>`;
+				$(".third").eq(k).append(str1);
+				k++;
+			}	
+		}
+	}
+
+
+
+	//点击每个城市，获取当前城市天气信息\\\\\
+	window.onload=function(){
+		
+	$(".first,.second>div,.third>div,.forth>div").click(function(){
+		$(".body2").css({"display":"none"})
+		$(".section").css({"display":"block"})
+		$(".more").css({"display":"block"})
+		$(".bottom").css({"display":"block"})
+		$(".foot").css({"display":"block"})
+		$(".back").css({"display":"block"})
+		$(".today").css({"display":"block"})
+		let con=$(this).html();
+//		console.log(con)
+		ajaxs(con);
+		
+	})
+	function ajaxs(str){
+console.log(str)
+		let url1=`https://www.toutiao.com/stream/widget/local_weather/data/?city=${str}`
+		console.log(url1)
+		$.ajax({
+			type:"get",
+			url:url1,
+			dataType:"jsonp",
+			success:function(obj){
+				let tianqi2=obj.data;
+				console.log(tianqi2)
+				update(tianqi2);
+				
+			}
+		})
+	}
+	//在搜索框内输入内容，可以搜索到当前城市的天气信息
+	$("input").focus(function(){		
+		$(".p1").html("搜索");
+			
+	})
+	$("input").blur(function(){
+			if($(this).val()===""){
+				$(".p1").html("取消");
+			}
+	})
+	
+	//当点击搜索时，获取input中的内容进行搜索
+	$(".p1").click(function(){		
+//		console.log(1)
+		$(".body2").css({"display":"none"})
+		$(".section").css({"display":"block"})
+		$(".more").css({"display":"block"})
+		$(".bottom").css({"display":"block"})
+		$(".foot").css({"display":"block"})
+		$(".back").css({"display":"block"})
+		$(".today").css({"display":"block"})
+		
+		let text=$("input").val();
+//		console.log(text);
+		for(let i in city){
+			if(text==i){
+				ajaxs(text);
+			}
+			for(let j in city[i]){
+				console.log(j)
+				if(text==j||text==i){
+					
+					ajaxs(text)
+					return;					
+				}					
+			}
+		}
+		alert("该城市不存在");
+			
+	})
+
+}
+	
+	
+
+</script>
